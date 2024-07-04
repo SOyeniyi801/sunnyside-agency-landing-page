@@ -2,9 +2,9 @@
   /* Primary */
   --soft-red: #fe7866;
   --yellow: #f9d400;
-  --dark-desaturated-cyan: ##24554b;
+  --dark-desaturated-cyan: #24554A;
   --dark-blue: #19526b;
-  --dark-moderate-cyan: #458c7d;
+  --dark-moderate-cyan: #3E7467;
 
   /* Neutral */
   --very-dark-desaturated-blue: #232f3d;
@@ -19,16 +19,14 @@
   margin: 0;
 }
 
-
 /* Hero */
 header {
-    font-family: "Barlow", sans-serif;
-
+  font-family: "Barlow", sans-serif;
 }
 .nav-logo {
-    font-family: "Barlow", sans-serif;
-    font-weight: 600;
-    font-size: 40px;
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-size: 40px;
 }
 .nav-container {
   display: flex;
@@ -42,8 +40,7 @@ header {
   /* margin-top: 50px; */
 }
 .nav-main {
-    width: 35%;
-
+  width: 35%;
 }
 .nav-main ul {
   list-style: none;
@@ -52,51 +49,154 @@ header {
   align-items: center;
 }
 .contact {
-    border-radius: 30px;
-    width: 140px;
-    height: 56px;
-    font-family: "Fraunces", sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
-    border: none;
-    background-color: var(--white);
+  border-radius: 30px;
+  width: 140px;
+  height: 56px;
+  font-family: "Fraunces", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  background-color: var(--white);
 }
 
 .hero {
-    height: 800px;
-    position: relative;
-    z-index: 1;
-    background-image: url("./images/desktop/image-header.jpg");
-    background-size: cover;
-    background-position: center;
-    color: var(--white);
+  width: 1440px;
+  height: 800px;
+  position: relative;
+  z-index: 1;
+  background-image: url("./images/desktop/image-header.jpg");
+  background-size: cover;
+  background-position: center;
+  color: var(--white);
 }
 
 .hero-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .hero-text {
-    display: flex;
-    font-family: "Fraunces", sans-serif;
-    font-size: 56px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 8.75px;
-    margin-top: 105px;
+  display: flex;
+  font-family: "Fraunces", sans-serif;
+  font-size: 56px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 8.75px;
+  margin-top: 105px;
 }
 
 .arrow {
-    display: flex;
-    justify-content: center;
-    margin-top: 96.54px;
+  display: flex;
+  justify-content: center;
+  margin-top: 96.54px;
 }
 
 /* Content Body */
-
-.content-box{
-    width: 720px;
-    height: 600px;
+.content-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 600px);
+  max-width: 1200px;
 }
+.content-box {
+  width: 720px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.panel {
+  width: 445px;
+}
+
+.panel h3 {
+  font-family: "Fraunces", sans-serif;
+  font-size: 40px;
+  margin-bottom: 36px;
+  color: var(--very-dark-desaturated-blue);
+}
+
+.panel p {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  color: var(--dark-grayish-blue);
+  font-size: 18px;
+}
+
+.panel > .link {
+  margin-top: 40px;
+  font-family: "Fraunces", sans-serif;
+  color: var(--very-dark-desaturated-blue);
+  position: relative;
+}
+
+.panel > .link::before {
+  background-color: var(--yellow);
+  opacity: 30%;
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 40%;
+  bottom: 0;
+  z-index: -1;
+}
+.panel > .link:hover::before {
+  opacity: 100%;
+}
+.content-container .content-box:nth-of-type(4) .link::before {
+  background-color: var(--soft-red);
+  opacity: 30%;
+}
+.content-container .content-box:nth-of-type(4) .link:hover::before {
+  opacity: 100%;
+}
+
+.panel-five {
+  background-image: url("./images/desktop/image-graphic-design.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: end;
+}
+.panel-five h3 {
+    color: var(--dark-desaturated-cyan);
+}
+.panel-five p {
+    color: var(--dark-moderate-cyan);
+}
+.img-text {
+  width: 339px;
+  text-align: center;
+  margin-bottom: 59px;
+}
+
+.img-text h3{
+    font-family: "Fraunces", sans-serif;
+    font-size: 28px;
+    margin-bottom: 27px;
+}
+
+.img-text p {
+    font-family: "Barlow", sans-serif;
+    font-size: 16px;
+}
+
+.panel-six {
+  background-image: url("./images/desktop/image-photography.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: end;
+}
+.panel-six h3 {
+    color: var(--dark-blue);
+}
+.panel-six p {
+    color: #19536C;
+}
+
+
+
