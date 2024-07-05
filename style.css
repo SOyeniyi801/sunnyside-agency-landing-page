@@ -2,9 +2,9 @@
   /* Primary */
   --soft-red: #fe7866;
   --yellow: #f9d400;
-  --dark-desaturated-cyan: #24554A;
+  --dark-desaturated-cyan: #24554a;
   --dark-blue: #19526b;
-  --dark-moderate-cyan: #3E7467;
+  --dark-moderate-cyan: #3e7467;
 
   /* Neutral */
   --very-dark-desaturated-blue: #232f3d;
@@ -14,17 +14,23 @@
   --white: #ffffff;
 }
 
+/* Global Styles */
 * {
   padding: 0;
   margin: 0;
 }
 
-/* Hero */
+/* Start of Nav Section */
 header {
   font-family: "Barlow", sans-serif;
+  color: var(--white);
+  position: absolute;
+  z-index: 1;
+  top: 34px;
+  left: 0;
+  right: 0;
 }
 .nav-logo {
-  font-family: "Barlow", sans-serif;
   font-weight: 600;
   font-size: 40px;
 }
@@ -32,12 +38,10 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  /* position: absolute; */
   font-size: 18px;
   align-items: center;
   margin-left: 40px;
   margin-right: 48px;
-  /* margin-top: 50px; */
 }
 .nav-main {
   width: 35%;
@@ -58,32 +62,33 @@ header {
   border: none;
   background-color: var(--white);
 }
-
-.hero {
+/* End of Nav Section */
+/* Start of Hero Section */
+.hero-section {
   width: 1440px;
   height: 800px;
   position: relative;
-  z-index: 1;
   background-image: url("./images/desktop/image-header.jpg");
   background-size: cover;
   background-position: center;
   color: var(--white);
+  position: relative;
 }
 
-.hero-content {
+.hero-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.hero-text {
+.hero-box {
   display: flex;
   font-family: "Fraunces", sans-serif;
   font-size: 56px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 8.75px;
-  margin-top: 105px;
+  margin-top: 195px;
 }
 
 .arrow {
@@ -91,9 +96,10 @@ header {
   justify-content: center;
   margin-top: 96.54px;
 }
+/* End of Hero Section */
 
-/* Content Body */
-.content-container {
+/* Start of Content Section */
+.content-section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 600px);
@@ -124,6 +130,7 @@ header {
   font-weight: 600;
   color: var(--dark-grayish-blue);
   font-size: 18px;
+  line-height: 30px;
 }
 
 .panel > .link {
@@ -146,11 +153,11 @@ header {
 .panel > .link:hover::before {
   opacity: 100%;
 }
-.content-container .content-box:nth-of-type(4) .link::before {
+.content-section .content-box:nth-of-type(4) .link::before {
   background-color: var(--soft-red);
   opacity: 30%;
 }
-.content-container .content-box:nth-of-type(4) .link:hover::before {
+.content-section .content-box:nth-of-type(4) .link:hover::before {
   opacity: 100%;
 }
 
@@ -162,10 +169,10 @@ header {
   justify-content: end;
 }
 .panel-five h3 {
-    color: var(--dark-desaturated-cyan);
+  color: var(--dark-desaturated-cyan);
 }
 .panel-five p {
-    color: var(--dark-moderate-cyan);
+  color: var(--dark-moderate-cyan);
 }
 .img-text {
   width: 339px;
@@ -173,15 +180,16 @@ header {
   margin-bottom: 59px;
 }
 
-.img-text h3{
-    font-family: "Fraunces", sans-serif;
-    font-size: 28px;
-    margin-bottom: 27px;
+.img-text h3 {
+  font-family: "Fraunces", sans-serif;
+  font-size: 28px;
+  margin-bottom: 27px;
 }
 
 .img-text p {
-    font-family: "Barlow", sans-serif;
-    font-size: 16px;
+  font-family: "Barlow", sans-serif;
+  font-size: 16px;
+  line-height: 27px;
 }
 
 .panel-six {
@@ -192,11 +200,62 @@ header {
   justify-content: end;
 }
 .panel-six h3 {
-    color: var(--dark-blue);
+  color: var(--dark-blue);
 }
 .panel-six p {
-    color: #19536C;
+  color: #19536c;
+}
+/* End of Content Section */
+/* Start of Testimonials Section */
+
+/* .testimonials-section {
+    
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+} */
+.testimonials-container {
+  height: 600px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.testimonials-header {
+  text-align: center;
+  font-family: "Fraunces", sans-serif;
+  color: var(--dark-grayish-blue);
+  font-size: 20px;
+  letter-spacing: 8.75px;
+  text-transform: uppercase;
+  margin-top: 160px;
+}
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.avatar {
+  border-radius: 50%;
+  width: 72px;
+  margin-bottom: 60px;
 }
 
-
-
+.testimonials-text {
+  width: 350px;
+  margin-bottom: 69px;
+  text-align: center;
+  font-family: "Barlow", sans-serif;
+  font-size: 18px;
+  line-height: 36px;
+  color: var(--dark-grayish-blue);
+}
+.testimonials-name {
+  font-family: "Fraunces", sans-serif;
+  font-size: 18px;
+}
+.testimonials-title {
+  font-family: "Barlow", sans-serif;
+  font-size: 14px;
+  line-height: 25px;
+}
