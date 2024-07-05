@@ -208,13 +208,6 @@ header {
 /* End of Content Section */
 /* Start of Testimonials Section */
 
-/* .testimonials-section {
-    
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-} */
 .testimonials-container {
   height: 600px;
   display: flex;
@@ -253,9 +246,20 @@ header {
 .testimonials-name {
   font-family: "Fraunces", sans-serif;
   font-size: 18px;
+  font-weight: 700;
 }
 .testimonials-title {
   font-family: "Barlow", sans-serif;
   font-size: 14px;
   line-height: 25px;
+  color: var(--dark-grayish-blue);
+  margin-top: 9px;
 }
+/* End of Testimonials Section */
+/* Start of Gallery Section */
+.gallery-section {
+    height: 470px;
+    display: flex;
+    flex-direction: row;
+}
+/* End of Gallery Section */
