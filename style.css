@@ -20,7 +20,7 @@
   margin: 0;
 }
 body {
-    width: 1440px;
+   max-width: 100%;
 }
 
 /* Start of Nav Section */
@@ -277,7 +277,7 @@ header {
 /* Start of Footer Section */
 .footer-section {
     height: 350px;
-   max-width: 100%;
+   width: 1440px;
     background-color: #90D4C6;
     display: flex;
     align-items: center;
@@ -328,11 +328,12 @@ header {
     height: 20px;
     width: 20px;
 }
-/* End of Footer Section */
-
 .footer-socials img:hover {
     filter: invert(100%) brightness(1000%);
     transition: filter 0.3s ease;
   }
+/* End of Footer Section */
+
+
   
   
