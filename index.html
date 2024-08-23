@@ -39,6 +39,9 @@
         <div class="nav-logo">
           <img src="./images/logo.svg" alt="sunnyside logo">
         </div>
+        <div class="hamburger">
+          <img src="./images/icon-hamburger.svg" alt="hamburger icon">
+        </div>
         <div class="nav-main">
           <ul>
             <li>About</li>
@@ -87,7 +90,7 @@
           <h3>Stand out to the right audience</h3>
           <p>
             Using a collaborative formula of designers, researchers,
-            photographers, videographers, and copywriters, we’ll build and extend
+            photographers, videographers, and copywriters, we'll build and extend
             your brand in digital places.
           </p>
           <p class="link">Learn more</p>
@@ -98,7 +101,7 @@
           <div class="img-text">
             <h3>Graphic design</h3> 
             <p>Great design makes you memorable. We deliver artwork that
-              underscores your brand message and captures potential clients’ attention.</p>
+              underscores your brand message and captures potential clients' attention.</p>
           </div>
       </div>
       <div class="content-box panel-six">
@@ -135,8 +138,8 @@
     <div class="testimonials">
       <img src="./images/image-thomas.jpg" alt="thomas-avatar" class="avatar">
       <p class="testimonials-text">
-        Sunnyside’s enthusiasm coupled with their keen interest in our
-      brand’s success made it a satisfying and enjoyable experience.
+        Sunnyside's enthusiasm coupled with their keen interest in our
+      brand's success made it a satisfying and enjoyable experience.
       </p>
       <p class="testimonials-name">
         Thomas S. 
@@ -195,11 +198,11 @@
    
     
     <!-- End of Footer Section-->
-   
-
-    <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Sammi</a>.
-  </div> -->
+    <script>
+      document.querySelector('.hamburger').addEventListener('click', function() {
+        document.querySelector('.nav-container').classList.toggle('active');
+      });
+    </script>
   </body>
 </html>
+
