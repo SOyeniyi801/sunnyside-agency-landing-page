@@ -142,6 +142,8 @@ header {
   width: 100%;
   padding-left: 110px ;
   padding-right: 164px;
+  display: flex;
+  flex-direction: column;
 }
 
 .panel h3 {
@@ -424,10 +426,33 @@ header {
     grid-template-columns: repeat(2, 1fr); /* Two images per row */
   }
 
+  @media (max-width: 765px) {
+    .panel-five {
+      height: 600px;
+    }
+    .panel-six {
+      height: 600px;
+    }
+  }
+
 
 @media (max-width: 480px) {
   .gallery-section {
     grid-template-columns: 1fr; /* One image per row */
+  }
+
+  .hero-box h3 {
+    font-size: 40px;
+  }
+
+  .panel {
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: center;
+  }
+
+  .panel h3 {
+    font-size: 32px;
   }
 }
 
