@@ -241,9 +241,9 @@ header {
 /* Start of Testimonials Section */
 
 .testimonials-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  flex-direction: wrap;
+  display: flex;
+  /* grid-template-columns: repeat(3, 1fr); */
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 20px;
@@ -371,10 +371,7 @@ header {
 
 /* Media Queries */
 @media (max-width: 1080px) {
-  .testimonials-container {
-    grid-template-columns: 1fr 1fr; /* Two columns for smaller screens */
-    gap: 30px;
-  }
+  
 
   .testimonials {
     max-width: 280px; /* Further limit the width */
@@ -397,8 +394,6 @@ header {
   }
 
 }
-
-
   .panel {
     padding-top: 64px;
     padding-bottom: 64px;
@@ -411,13 +406,12 @@ header {
   .panel-six {
     background-image: url("./images/mobile/image-photography.jpg");
   }
-  /* .testimonials-container {
-    display: flex;
+  .testimonials-container {
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 40px;
-  } */
+  }
   .testimonials {
     width: 100%;
     max-width: 300px;
