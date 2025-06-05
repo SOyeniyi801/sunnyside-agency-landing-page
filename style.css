@@ -45,13 +45,10 @@ header {
   align-items: center;
   font-size: 18px;
   align-items: center;
-  /* margin-left: 40px;
-  margin-right: 48px; */
   padding: 0 40px;
   box-sizing: border-box;
 }
 .nav-main {
-  /* width: 35%; */
   display: flex;
 }
 .nav-main ul {
@@ -61,8 +58,9 @@ header {
   align-items: center;
   gap: 40px;
 }
+
+/* REFACTORED: Base contact button styles */
 .contact {
-  border-radius: 30px;
   width: 140px;
   height: 56px;
   font-family: "Fraunces", sans-serif;
@@ -70,21 +68,25 @@ header {
   text-transform: uppercase;
   border: none;
   background-color: var(--white);
-}
-.contact:hover {
+  border-radius: 30px; /* Applied to the button itself */
   cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.contact:hover {
   background-color: rgba(255, 255, 255, 0.382);
   color: #ffffff;
 }
+
 .hamburger {
   display: none;
 }
 /* End of Nav Section */
+
 /* Start of Hero Section */
 .hero-section {
   width: 100%;
   height: 800px;
-  /* position: relative; */
   background-image: url("./images/desktop/image-header.jpg");
   background-size: cover;
   background-position: center;
@@ -140,8 +142,7 @@ header {
 
 .panel {
   width: 100%;
-  padding-left: 110px ;
-  padding-right: 164px;
+  padding: 0 90px;
   display: flex;
   flex-direction: column;
 }
@@ -238,11 +239,10 @@ header {
   color: #19536c;
 }
 /* End of Content Section */
-/* Start of Testimonials Section */
 
+/* Start of Testimonials Section */
 .testimonials-container {
   display: flex;
-  /* grid-template-columns: repeat(3, 1fr); */
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -263,7 +263,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 320px;
+  padding: 0 20px;
   margin: 10px;
 }
 .avatar {
@@ -273,7 +273,6 @@ header {
 }
 
 .testimonials-text {
-  /* width: 350px; */
   margin-bottom: 69px;
   text-align: center;
   font-family: "Barlow", sans-serif;
@@ -294,21 +293,19 @@ header {
   margin-top: 9px;
 }
 /* End of Testimonials Section */
+
 /* Start of Gallery Section */
 .gallery-section {
-  /* height: auto; */
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  /* width: 100%; */
-  /* overflow: hidden; */
 }
 .gallery-section img {
-  width: 100%; /* Maintain the aspect ratio */
-  height: auto; /* Full height of the container */
+  width: 100%;
+  height: auto;
   object-fit: cover;
 }
-
 /* End of Gallery Section */
+
 /* Start of Footer Section */
 .footer-section {
   height: 350px;
@@ -339,7 +336,7 @@ header {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 40px; /* Adjust the gap value to your preference */
+  gap: 40px;
   padding: 0;
   margin: 0;
 }
@@ -357,7 +354,7 @@ header {
   display: flex;
   justify-content: center;
   margin-top: 88px;
-  gap: 28px; /* Adjust the gap value to your preference */
+  gap: 28px;
 }
 .footer-socials > img {
   height: 20px;
@@ -371,32 +368,58 @@ header {
 
 /* Media Queries */
 @media (max-width: 1080px) {
-  
-
-  .testimonials {
-    max-width: 280px; /* Further limit the width */
-  }
+  /* .testimonials {
+    max-width: 280px;
+  } */
 
   .testimonials-text {
-    font-size: 15px; /* Slightly smaller text */
+    font-size: 15px;
   }
 }
 
+/* ADDED: Intermediate breakpoint to handle navigation spacing */
+@media (max-width: 900px) {
+  .nav-main ul {
+    gap: 20px; /* Reduce gap between nav items */
+  }
+  
+  .nav-container {
+    padding: 0 20px; /* Reduce side padding */
+  }
+}
 
-@media (max-width: 768px) {
+/* ADDED: Smaller screens but still desktop navigation */
+@media (max-width: 820px) {
+  .nav-main ul {
+    gap: 15px; /* Further reduce gap */
+  }
+  
+  .contact {
+    width: 120px; /* Slightly smaller contact button */
+    height: 48px;
+    font-size: 14px; /* Smaller font */
+  }
+}
+
+@media (max-width: 940px) {
   .content-section {
     display: flex;
     flex-direction: column;
   }
 
-  .content-box{
-    width: 100%;
+  .nav-container {
+    padding: 0 24px;
   }
 
-}
+  .content-box{
+    width: 100%;
+   min-height: 600px
+  }
+
   .panel {
     padding-top: 64px;
     padding-bottom: 64px;
+    text-align: center;
   }
 
   .panel-five {
@@ -406,33 +429,36 @@ header {
   .panel-six {
     background-image: url("./images/mobile/image-photography.jpg");
   }
+  
   .testimonials-container {
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 40px;
   }
+  
   .testimonials {
     width: 100%;
     max-width: 300px;
   }
+  
   .gallery-section {
-    grid-template-columns: repeat(2, 1fr); /* Two images per row */
+    grid-template-columns: repeat(2, 1fr);
   }
+}
 
-  @media (max-width: 765px) {
-    .panel-five {
-      height: 600px;
-    }
-    .panel-six {
-      height: 600px;
-    }
+@media (max-width: 765px) {
+  .panel-five {
+    height: 600px;
   }
-
+  .panel-six {
+    height: 600px;
+  }
+}
 
 @media (max-width: 480px) {
   .gallery-section {
-    grid-template-columns: 1fr; /* One image per row */
+    grid-template-columns: 1fr;
   }
 
   .hero-box h3 {
@@ -460,39 +486,35 @@ header {
   }
 }
 
-/* hamburger menu */
-.hamburger {
-  display: none;
-  cursor: pointer;
-}
-
-@media (max-width: 800px) {
+/* REFACTORED: Mobile Navigation Styles */
+@media (max-width: 768px) {
   .nav-main {
-    display: none; /* Hide the main nav */
+    display: none;
   }
 
   .hamburger {
-    display: block; /* Show the hamburger icon */
+    display: block;
+    cursor: pointer;
   }
 
-  /* Show the nav when hamburger is clicked */
+  /* REFACTORED: Mobile menu container */
   .nav-container.active .nav-main {
     display: flex;
     flex-direction: column;
     position: absolute;
     top: 60px;
-    right: 0;
-    color: var(--dark-grayish-blue);
-    background-color: var(--white); /* Set background color */
-    width: 80%; /* Slightly smaller width for padding */
+    right: 60px;
+    background-color: var(--white);
+    width: 30%;
+    min-width: 320px;
     height: auto;
     align-items: center;
     justify-content: flex-start;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
-    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    padding: 20px; /* Add padding for spacing */
+    padding: 20px;
   }
+
   .nav-main ul {
     flex-direction: column;
     justify-content: center;
@@ -502,111 +524,38 @@ header {
     padding: 0;
     margin: 0;
   }
+
   .nav-main ul li {
     width: 100%;
     text-align: center;
     padding: 10px 0;
-    border-bottom: 1px solid var(--grayish-blue); /* Add divider between links */
   }
 
-  .nav-main ul li:last-child {
-    border-bottom: none; /* Remove border for the last item */
+  /* REFACTORED: Mobile nav links styling */
+  .nav-main ul li.nav-link {
+    color: var(--dark-grayish-blue);
   }
 
-  .contact {
-    position: relative;
-    width: 100%; /* Full width for contact button */
+  /* REFACTORED: Mobile contact button - removed pseudo-element approach */
+  .nav-main .contact {
+    background-color: var(--yellow);
+    color: var(--very-dark-desaturated-blue);
+    border-radius: 30px; /* Now properly applied */
+    width: 140px;
+    height: 56px;
     margin-top: 20px;
-    background-color: transparent; 
-    color: var(--very-dark-desaturated-blue); /* Text color */
-    border-radius: 28%;
+    position: relative; /* Removed the pseudo-element entirely */
   }
 
-  .contact::before {
-    content:"";
-    position: absolute;
-    top: 0;
-    left: 50%; /* Center the pseudo-element horizontally */
-  transform: translateX(-50%); /* Shift it back by half its width to truly center it */
-  width: 140px; /* Set the width of the background */
-  height: 56px; /* Set the height of the background */
-  background-color: var(--yellow); /* Set the background color */
-  z-index: -1;
-  border-radius: 28%;
+  .nav-main .contact:hover {
+    background-color: var(--yellow);
+    opacity: 0.8;
   }
-} /* This closes the @media query block */
 
-
-
-/* Show the hamburger on smaller screens */
-@media (max-width: 768px) {
   .hamburger {
     display: block;
     position: absolute;
     top: 20px;
-    right: 40px;
+    right: 70px;
   }
-
-  .nav-container.active .nav-main {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    color: var(--dark-grayish-blue);
-    background-color: var(--white); /* Set background color */
-    width: 80%; /* Slightly smaller width for padding */
-    height: auto;
-    align-items: center;
-    justify-content: flex-start;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
-    border-radius: 10px; /* Rounded corners */
-    z-index: 1000;
-    padding: 20px; /* Add padding for spacing */
-  }
-
-  .nav-main ul {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .nav-main ul li {
-    width: 100%;
-    text-align: center;
-    padding: 10px 0;
-    border-bottom: 1px solid var(--grayish-blue); /* Add divider between links */
-  }
-
-  .nav-main ul li:last-child {
-    border-bottom: none; /* Remove border for the last item */
-  }
-
-  .contact {
-    position: relative;
-    width: 100%; /* Full width for contact button */
-    margin-top: 20px;
-    background-color: transparent; 
-    color: var(--very-dark-desaturated-blue); /* Text color */
-    border-radius: 28%;
-  }
-
-  .contact::before {
-    content:"";
-    position: absolute;
-    top: 0;
-    left: 50%; /* Center the pseudo-element horizontally */
-  transform: translateX(-50%); /* Shift it back by half its width to truly center it */
-  width: 140px; /* Set the width of the background */
-  height: 56px; /* Set the height of the background */
-  background-color: var(--yellow); /* Set the background color */
-  z-index: -1;
-  border-radius: 28%;
-  }
-
 }
-
